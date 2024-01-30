@@ -1090,6 +1090,12 @@ socket.on('checklistHTML', (checklistHTML) => {
   });
 });
 
+if (window.innerWidth < 980) {
+    document.body.style.display = none;
+} else {
+    document.body.style.display = block;
+}
+      
 function deselect(){
   const checkboxes = document.querySelectorAll('[type="checkbox"]');
       checkboxes.forEach(checkbox => {
